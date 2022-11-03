@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação prática 008 JS | Aula 29/06</title>
+
+</head>
+
+<body>
+
+    <h3>Por favor, verifique o console.</h3>
+
+    <script>
+        let i = 1;
+        let tabuada = 7;
+        while (i <= 10) {
+            console.log(`${i} x ${tabuada} = ${i * tabuada}`);
+            i++;
+        }
+        console.log(`Valor de saída: ${i}`)
+
+        let iRev = 10;
+        let tabuadaRev = 7;
+        while (iRev >= 0) {
+            console.log(`${iRev} x ${tabuadaRev} = ${iRev * tabuadaRev}`);
+            --iRev;
+        }
+
+        for (let x = 1; x <= 10; x++) {
+            console.log(`${x} x ${tabuada} = ${x * tabuada}`)
+        }
+
+        document.write("<table border='1' width='80%'>");
+        document.write("<tr><td>A</td><td>B</td><td>C</td></tr>");
+        for (let a = 1, b = 100, c = 2; a  <= b / c; a *= 2, b--, c++) {
+            document.write(`<tr><td>${a}</td><td>${b}</td><td>${c}</td></tr>`);
+        }
+        document.write("</table>");
+    </script>
+
+</body>
+
+</html>

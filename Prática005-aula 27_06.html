@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação prática 005 JS | Aula 27/06</title>
+    <link rel="stylesheet" href="">
+
+
+</head>
+
+<body>
+
+    <script>
+
+        function exemploAnd1() {
+            let c = 2, d = 5;
+            let cond = (c >= 2) && (d <= 5);
+            document.write(`<h3>resultado = ${cond}</h3>`);
+        }
+        function exemploAnd2() {
+            let c = 2, d = 5;
+            let cond = !((c >= 2) && (d < 5));
+            document.write(`<h3>resultado = ${cond}</h3>`);
+        }
+
+        exemploAnd1();
+        exemploAnd2();
+
+        function exemploOr1() {
+            let c = 4, d = 6;
+            let cond = (c >= 2) || (d <= 5);
+            document.write(`<h3>resultado = ${cond}</h3>`);
+        }
+        function exemploOr2() {
+            let c = 4, d = 6;
+            let cond = (c >= 6) || (d <= 5);
+            document.write(`<h3>resultado = ${cond}</h3>`);
+        }
+        exemploOr1();
+        exemploOr2();
+
+
+    </script>
+
+</body>
+
+</html>

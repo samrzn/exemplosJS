@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação prática 010 JS | Aula 01/07</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+            visibility: hidden;
+        }
+    </style>
+
+    <script>
+        function alternar() {
+            let objetoSel = document.getElementById("pnlAlvo");
+            let idPainel = objetoSel.value;
+            let painel = document.getElementById(idPainel);
+            if (painel.style.visibility == "visible")
+                painel.style.visibility = "hidden";
+            else
+                painel.style.visibility = "visible";
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <select id="pnlAlvo">
+        <option value="pnl1" selected>Paínel 1</option>
+        <option value="pnl2">Paínel 2</option>
+        <option value="pnl3">Paínel 3</option>
+    </select>
+    <button onclick="alternar()">Clique aqui</button>
+
+    <hr>
+    <div id="pnl1">Sou o paínel 1</div>
+    <div id="pnl2">Sou o paínel 2</div>
+    <div id="pnl3">Sou o paínel 3</div>
+
+</body>
+
+</html>

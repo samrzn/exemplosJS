@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação prática 009 JS | Aula 29/06</title>
+
+</head>
+
+<body>
+
+    <script>
+        let meses = ["Jan", "Fev", "Mar",
+            "Abr", "Mai", "Jun",
+            "Jul", "Ago", "Set",
+            "Out", "Nov", "Dez"];
+        function alterar(valor) {
+            let objeto = document.getElementById("txtmes");
+            if (valor < 1 || valor > 12)
+                objeto.innerHTML = "Inválido";
+            else
+                objeto.innerHTML = meses[valor - 1];
+        }
+
+
+    </script>
+
+    <input type="number" onchange="alterar(this.value)" onkeyup="alterar(this.value)">
+    <hr>
+    <div id="txtmes"></div>
+
+    <h3>Por favor, verifique o console.</h3>
+
+    <script>
+        let valores = [11, 6, 19, 98, 4, 7, 0, 2];
+        console.log("Usando 'for'...");
+        for (let i = 0; i < valores.length; i++)
+            console.log(`Valores na posição ${i} = ${valores[i]}`)
+
+        console.log("Usando 'for each'...");
+        valores.forEach(
+            function (item, indice, array) {
+                console.log(`Valores na posição ${indice} = ${item}`);
+            }
+        );
+        valores.push(11, 12, 24, 22);
+        console.log(valores);
+        valores.pop();
+        valores.shift();
+        console.log(valores);
+        valores.splice(2, 2);
+        console.log(valores);
+
+        let ordenado = false;
+        while (!ordenado) {
+            ordenado = true;
+            for (let i = 1; i < valores.length; i++) {
+                if (valores[i - 1] > valores[i]) {
+                    aux = valores[i - 1];
+                    valores[i - 1] = valores[i];
+                    valores[i] = aux;
+                    ordenado = false;
+                }
+            }
+        }
+        console.log("Ordenado...")
+        console.log(valores);
+    </script>
+
+
+    <script>
+        let valoresPrint = [11, 6, 19, 98, 4, 7, 0, 2];
+        function imprimeLinha() {
+            document.write("<li>");
+            for (let i = 0; i < valoresPrint.length; i++) {
+                document.write(valoresPrint[i] + " :: ");
+            }
+            document.write("</li>")
+        }
+        valoresPrint.push(11, 12, 24, 22);
+        valoresPrint.pop();
+        valoresPrint.shift();
+        valoresPrint.splice(2, 2);
+
+        let i = 0, ordenadoPrint = false;
+        while (!ordenadoPrint) {
+            document.write(`<h3>Round ${++i}</h3><ul>`)
+            imprimeLinha();
+            ordenadoPrint = true;
+            for (let i = 1; i < valoresPrint.length; i++) {
+                if (valoresPrint[i - 1] > valoresPrint[i]) {
+                    aux = valoresPrint[i - 1];
+                    valoresPrint[i - 1] = valoresPrint[i];
+                    valoresPrint[i] = aux;
+                    ordenadoPrint = false;
+                    imprimeLinha();
+                }
+            }
+            document.write("</ul>");
+        }
+
+        valoresPrint.length = 0;
+        valoresPrint.push("Gabriel", "Lívia", "Natália", "Lucas");
+        valoresPrint.sort();
+        document.write("<h3>Utilizando sort</h3><ul>");
+        imprimeLinha();
+        document.write("</ul>");
+    </script>
+
+</body>
+
+</html>

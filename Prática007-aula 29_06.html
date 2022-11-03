@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação prática 007 JS | Aula 29/06</title>
+
+    <script>
+        function testaValor() {
+            let campoValor = document.getElementById("v1");
+            let opcao = eval(campoValor.value);
+            switch (opcao) {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    console.log("Primeiro quadrimestre");
+                    break;
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                    console.log("Segundo quadrimestre");
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                    console.log("Terceiro quadrimestre");
+                    break;
+                default:
+                    console.log("Mês inválido");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div>
+        Número: <input type="number" id="v1">
+        <button onclick="testaValor()">Clique aqui</button>
+    </div>
+
+</body>
+
+</html>

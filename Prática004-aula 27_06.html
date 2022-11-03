@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação prática 004 JS | Aula 27/06</title>
+    <link rel="stylesheet" href="">
+
+
+</head>
+
+<body>
+
+    <script>
+
+        x = 5;
+        // x = x + 2;
+        x += 2;
+        document.write(`<h3>${x}</h3>`);
+        x -= 3;
+        document.write(`<h3>${x}</h3>`);
+        x *= 5;
+        document.write(`<h3>${x}</h3>`);
+        x /= 2;
+        document.write(`<h3>${x}</h3>`);
+        x %= 4;
+        document.write(`<h3>${x}</h3>`);
+
+        let a = 2, b;
+        b = ++a;    // pré-incremento
+        document.write(`<h3>a = ${a}, b = ${b}</h3>`);
+        a = 2;
+        b = a++;    // pós-incremento
+        document.write(`<h3>a = ${a}, b = ${b}</h3>`);
+
+
+
+        function decremento() {
+            let a = 4, b;
+            b = --a;    // pré-decremento
+            document.write(`<h3>a = ${a}, b = ${b}</h3>`);
+            a = 2;
+            b = a--;    // pós-decremento
+            document.write(`<h3>a = ${a}, b = ${b}</h3>`);
+        }
+        decremento()
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação prática 006 JS | Aula 27/06</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .pnl {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border: black solid 1px;
+            text-align: center;
+            margin: 5px;
+            padding: 10px;
+            opacity: 0.5;
+        }
+
+        .pnl-faixa1 {
+            background-color: red;
+        }
+
+        .pnl-faixa2 {
+            background-color: orange;
+        }
+
+        .pnl-faixa3 {
+            background-color: green;
+        }
+    </style>
+
+    <script>
+        let paineis = new Array();
+
+        function atualizar() {
+            var i = 0;
+            while (i < paineis.length) {
+                let idAtual = paineis[i];
+                let posx = Math.round(Math.round() * 1200);
+                let posy = 50 + Math.round(Math.round() * 500);
+                let objeto = document.getElementById(idAtual);
+                objeto.style.top = `${posy}px`;
+                objeto.style.left = `${posx}px`;
+                i++;
+            }
+            setTimeout(atualizar, 100);
+        }
+
+    </script>
+
+</head>
+
+<body onload="atulizar()">
+
+    <script>
+        for (var i = 0; i <= 300; i++) {
+            let a = Math.round(Math.random() * 10);
+            let posx = Math.round(Math.random() * 1200);
+            let posy = 50 + Math.round(Math.random() * 500);
+            let classe = "pnl" +
+                ((a < 5) ? " pnl-faixa1" :
+                    (a < 7) ? " pnl-faixa2" : " pnl-faixa3");
+
+            /*
+if (a < 5)
+    classe += " pnl-faixa1";
+if (a >= 5 && a <= 7)
+    classe += " pnl-faixa2";
+if (a > 7)
+    classe += " pnl-faixa3";
+    */
+            document.write(`<div class="${classe}" id="n${i}" style="top:${posy}px;left:${posx}px">${a}</div>`);
+            paineis.push(`n${i}`);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
